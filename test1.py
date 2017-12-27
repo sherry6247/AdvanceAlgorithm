@@ -100,23 +100,22 @@ if __name__ == '__main__':
     ben_rootpath = 'G:\\machinelearning\\train_ben'
     api_dict = readAPItxt(api_path)
     opcode_dict = readOptxt(opcode_txt_path)
-    print(api_dict)
     i = 0
-    for mal_file in os.listdir(mal_rootpath):
+    for ben_file in os.listdir(ben_rootpath):
         all_list = []
         i = i + 1
         # if i >= 8:
-        m_path = os.path.join(mal_rootpath, mal_file)
-        print(m_path)
-        opcode_list, mal_api_list = getOpcodelist(m_path, opcode_dict, api_dict)
+        b_path = os.path.join(ben_rootpath, ben_file)
+        print(b_path)
+        opcode_list, ben_api_list = getOpcodelist(b_path, opcode_dict, api_dict)
         # print(opcode_list)
         # print(mal_api_list)
-        with open('./feature_txt/mal_f/mal_f_' + str(i) + '.txt', 'w') as f:
+        with open('./feature_txt/ben_f/ben_f_' + str(i) + '.txt', 'w') as f:
             for op in opcode_list:
                 f.write(op)
             f.write("\n")
-            for mal in mal_api_list:
-                f.write(mal)
+            for ben in ben_api_list:
+                f.write(ben)
 
         allfile = []  # 已经得到所有的Malware文件下的.smali中七类操作码
         print(i)

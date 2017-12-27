@@ -1,0 +1,22 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: Deduction_3.apk
+compressionType: false
+doNotCompress:
+- arsc
+- res/drawable/privatekey
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '3'
+sharedLibrary: false
+unknownFiles: {}
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.3.0
+versionInfo:
+  versionCode: '2'
+  versionName: '2.0'
